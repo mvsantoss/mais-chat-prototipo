@@ -1,0 +1,329 @@
+/* ------------ BACKGROUND ------------ */
+#wrapper {
+     background-image:none;
+     background-attachment: fixed;
+     background-position: 0 200px;
+     background-repeat: no-repeat;
+     background-size: 100%;
+}
+#wrapper.home {
+    background-image: none;
+}
+
+
+
+/* ------------ HOME MAIS ------------ */
+#home-mais {
+    background-image: none;
+    text-align: center;
+}
+
+#home-mais:before {
+    background-color: #fff;
+}
+
+#home-mais .form-control {
+    background-color: rgba(21, 22, 23, 0.05);
+    border-color: rgba(21, 22, 23, 0.14);
+    color: #D02128;
+    height: 60px;
+}
+
+.menu-home .navbar {
+    margin-left: -291px;
+    left: 50%;
+    float: none;
+}
+
+#home-mais {
+    padding: 30px 0 0;
+}
+#home-mais img {
+    width: 600px;
+}
+
+#home-mais-buttons {
+    margin-top: 70px;
+}
+#home-mais-buttons .btn {
+    color: rgba(79, 80, 81, 0.298039);
+    border-color: rgba(79, 80, 81, 0.298039);
+}
+#home-mais-buttons .btn.active {
+    background-color: rgb(223, 74, 67);
+    color: rgb(255, 255, 255);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border: 1px solid rgb(223, 74, 67);
+}
+#home-mais-buttons .btn {
+            border-color: rgba(79, 80, 81, 0.3);
+            color: rgba(79, 80, 81, 0.3);
+}
+#home-mais-buttons > .btn {
+    margin: 0 5px;
+}
+
+#home-mais-buttons .btn.active {
+    background-color: #DF4A43;
+    color: #fff;
+    border: 1px solid #DF4A43;
+}
+
+#home-mais-buttons .input-group {
+    margin: 18px 0 22px;
+}
+
+#home-mais-buttons .input-group .btn-default {
+    border: none;
+    background-color: #df4a43;
+    height: 60px;
+    color: rgba(255, 255, 255, 0.7);
+    width: 80px;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+}
+#home-mais-buttons .input-group .btn-default:hover {
+    width: 100px;
+    padding-left: 30px;
+    color: #ffffff;
+}
+#home-mais-buttons .input-group .btn-default .fa {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -6px;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+#home-mais-buttons .input-group .btn-default:hover .fa {
+  left: 12px;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+
+
+/* ------------ BARRA DE CONTATO HOME ------------ */
+.barra-contato {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #006BB6;
+    padding: 15px 0;
+    z-index: 99;
+}
+
+.barra-contato h2 {
+    margin: 0;
+    font-weight: 400;
+    color: #fff;
+    text-transform: none;
+    text-align: center;
+}
+.barra-contato a:hover, .barra-contato a:active, .barra-contato a:visited, .barra-contato a:focus {
+    text-decoration: none;
+}
+
+
+
+/* ------------ LOGO MENU ------------ */
+.nav-logo img {
+    height: 70px;
+    width: auto;
+    margin-top: 10px;
+}
+#nav-section.shrink .nav-logo img {
+    margin-top: 0;
+}
+
+@media (max-width: 992px) {
+    .nav-logo img {
+        height: 55px;
+    }
+}
+
+
+
+/* ------------ CHAT ------------ */
+#chat {
+	bottom: 0;
+	font-size: 12px;
+	right: 0;
+	position: fixed;
+	width: 400px;
+        z-index: 99;
+        background-color: #DF4A43;
+    padding: 0 20px;
+    bottom: -490px;
+    height: 538px;
+    }
+#chat header {
+	background: #DF4A43;
+	border-radius: 5px 5px 0 0;
+	cursor: pointer;
+	padding: 16px 0;
+}
+#chat h4 {	
+    font-size: 15px;
+	color: #fff;
+    }
+#chat h5 {	font-size: 10px;}
+#chat form {	padding: 24px;}
+.sayac {
+	background: #F37B23;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	display: none;
+	font-size: 12px;
+	font-weight: bold;
+	height: 28px;
+	left: 0;
+	line-height: 28px;
+	margin: -15px 0 0 -15px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 28px;
+    color: #fff;
+}
+
+.kapat {
+	background: #fff;
+	border-radius: 50%;
+	color: #006BB6;
+	display: block;
+	float: right;
+	font-size: 20px;
+	height: 20px;
+	line-height: 15px;
+	margin: 0px 0 0 0;
+	text-align: center;
+	width: 20px;
+    border:solid #fff 2px;
+  
+}
+
+.kapat i {
+    line-height: 18px;
+}
+
+.kapat:hover{background: #fff;border:solid 2px rgba(255,255,255,0.2);}
+.chat {
+	background: rgba(255, 255, 255, 0.95);;
+}
+
+.mesaj-gecmisi {
+	height: 245px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+
+
+.o {	
+	padding: 5px 25px;
+	outline: none;
+	border-bottom:solid 1px #eee;
+	color:#aaa;
+   position:relative;
+}
+
+.sen{background-color:rgba(0,0,0,0.01);text-align:left}
+.gizle{margin-bottom:-350px;}
+img{border-radius:5px;margin:0 5px 0 5px; top:0;}
+.sil{ clear:both;}
+
+.feedback-chat{color:#ccc; margin:0 0 -20px 25px; font-style: italic; padding: 5px 0; height: 27px;}
+
+.corretor hr {
+    border-bottom: 1px solid rgba(193, 193, 193, 0.52);
+    width: 80%;
+}
+.corretor img {
+        display: inline-flex;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px 0 23px;
+}
+
+.corretor p {
+    display: inline-block;
+    position: absolute;
+}
+
+.form-chat p {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px 0;
+}
+.chat-logo {
+    padding: 10px 0;
+    width:130px;
+}
+
+@media (max-width: 380px) {
+    #chat {
+        width: 100%;
+    }
+}
+
+
+
+/* ------------ PAGE TITLE/BREADCRUMB ------------ */
+.parallax {
+    padding: 20px 0;
+}
+
+.breadcrumb, .page-title {
+    margin: 0;
+}
+
+
+
+/* ------------ FOOTER ------------ */
+#footer-top img {
+    max-width: 200px;
+}
+
+.footer-contacts li:first-child {
+    padding-top: 0px;
+    line-height: 15px;
+}
+
+#footer-top .footer-listings img {
+    width: 53px;
+    height: 53px;
+}
+
+
+
+/* ------------ DETALHE DO IMÓVEL ------------ */
+.property-title {
+    margin-top: 10px;
+}
+
+
+/* ------------ CONTATO ------------ */
+.map-col-1 li {
+    padding-top: 0px !important;
+    line-height: 15px;
+}
+.contacts .main {
+    padding-bottom: 40px;
+}
+.contacts .main .section-title {
+    margin-top: 0;
+}
+
+
+
+
+

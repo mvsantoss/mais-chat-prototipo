@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html style="" lang="en"><!--<![endif]--><head>
+	<meta charset="utf-8">
+	
+	<!-- Page Title -->
+	<title>Operator Chat Dashboard</title>
+	
+<body>
+    <button class="update">Atualizar</button>
+    <div class="chats">
+        
+    </div>
+    <div class="chat" style="display: none">
+        <p class="user">
+            <span class="user-name">Usuario</span> <br>
+            <span class="user-telphone">(21) 00000-0000</span> <br>
+            <span class="user-email">email@mail.com</span> <br>
+        </p>
+        <div class="messages">
+            
+        </div>
+        <div class="message-form">
+            <input type="text" class="message" name="message" value="" placeholder="Digite sua mensagem...">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+	
+    <script type="text/javascript">
+        //localStorage.debug = false;
+        $(document).ready(function () {
+            var socket;
+            var operatorData = {
+                'name': 'Operator 1',
+                'email': 'operator1@mail.com',
+                'telphone': '12345678'
+            };
+            function createChat (chat) {
+                $('.chat').show();
+                socket = io('http://'+document.domain+':2020');
+                socket.emit('operator enter', {'operator': operatorData, 'chat': chat});
+                socket.on('start', function (data) {
+                    $('p.user .user-name').html(data.user.name);
+                    $('p.user .user-telphone').html(data.user.telphone);
+                    $('p.user .user-email').html(data.user.email);
+                    $('.chat').show();
+                    $('.message-form').show();
+                });
+                socket.on('message', function (data) {
+                    $('.chat .messages').append(data.name + ": " + data.message + "<br>");
+                });
+            }
+            function updateChats() {
+                $('.chats').html('');
+                $.get('/chats.php', {}, function(data) {
+                    $('.chats').append($(data));
+                    $('.operator-enter').click(function(event) {
+                        chat = $(this).data('chat');
+                        createChat(chat);
+                    });
+                });
+            }
+            $('.message-form .message').keyup(function(event) {
+                if(event.keyCode != 13){
+                    return true;
+                }
+                socket.emit('operator message', $(this).val());
+                $(this).val('');
+                return false;
+            });
+            //setInterval(updateChats, 500);
+            $('button.update').click(function(event) {
+                updateChats();
+            });
+        });
+	</script>
+	
+
+</body></html>

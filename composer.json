@@ -1,0 +1,13 @@
+{
+    "name": "marcus/mais-chat",
+    "authors": [
+        {
+            "name": "Marcus Santos",
+            "email": "mvsantoss@gmail.com"
+        }
+    ],
+    "require": {
+        "workerman/phpsocket.io": "^1.0",
+        "lichtner/fluentpdo": "^1.0"
+    }
+}
